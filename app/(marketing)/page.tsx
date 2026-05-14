@@ -35,6 +35,9 @@ import { SolutionsScrollSection } from "@/components/SolutionsScrollSection";
 import { VersatileTechEcosystem } from "@/components/VersatileTechEcosystem";
 import { StickyScrollTabs } from "@/components/StickyScrollTabs";
 import { IndustrySolutions } from "@/components/IndustrySolutions";
+import { EngagementModels } from "@/components/EngagementModels";
+import { AccoladesSlider } from "@/components/AccoladesSlider";
+import { ClientStories } from "@/components/ClientStories";
 
 
 const fadeUp = {
@@ -251,6 +254,9 @@ export default function LandingPage() {
 
 
       <IndustrySolutions />
+      <EngagementModels />
+      <AccoladesSlider />
+      <ClientStories />
 
       <motion.section
         initial="hidden"
