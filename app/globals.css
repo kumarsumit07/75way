@@ -94,3 +94,16 @@ body::selection {
 .shadow-primary {
   box-shadow: 0 24px 80px rgba(10, 89, 194, 0.18);
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}

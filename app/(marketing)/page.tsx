@@ -26,8 +26,16 @@ import {
 import Robot from "@/components/Robot";
 import { TrustedByBar } from "@/components/TrustedByBar";
 import { EngineeringSuccessSection } from "@/components/EngineeringSuccessSection";
+import {
+  ExpandableImageShowcase,
+  type ShowcaseImageItem,
+} from "@/components/ExpandableImageShowcase";
+import { AiAgentStoreSection } from "@/components/ai-agent-store";
 import { SolutionsScrollSection } from "@/components/SolutionsScrollSection";
 import { VersatileTechEcosystem } from "@/components/VersatileTechEcosystem";
+import { StickyScrollTabs } from "@/components/StickyScrollTabs";
+import { IndustrySolutions } from "@/components/IndustrySolutions";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -72,17 +80,6 @@ const cases = [
   ["Healthcare", "Unified healthcare web and app system for better patient engagement.", "+62%", "Workflow Optimization"],
 ];
 
-const industries = [
-  "Healthcare",
-  "Real Estate",
-  "E-commerce",
-  "Fintech",
-  "Logistics",
-  "Education",
-  "Travel",
-  "Entertainment",
-];
-
 const tech = [
   "Artificial Intelligence",
   "Generative AI",
@@ -91,6 +88,51 @@ const tech = [
   "Internet of Things",
   "Data Science",
   "Business Intelligence",
+];
+
+const marketShowcaseImages: ShowcaseImageItem[] = [
+  {
+    src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2400&q=88",
+    alt: "Neural network visualization representing artificial intelligence",
+    title: "Artificial Intelligence",
+    description: "Create AI & ML-powered apps and intelligent software experiences.",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=2400&q=88",
+    alt: "Blockchain technology and digital finance concept",
+    title: "Blockchain Development",
+    description: "Build secure on-chain products, wallets, and decentralized workflows.",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=88",
+    alt: "Connected devices and IoT technology",
+    title: "IoT Development",
+    description: "Connect devices to deliver smarter IoT solutions at scale.",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2400&q=88",
+    alt: "Web analytics dashboard on a laptop",
+    title: "Web App Development",
+    description: "Develop future-ready web apps with crisp UX and performance.",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2400&q=88",
+    alt: "Software development and programming code",
+    title: "Custom Software",
+    description: "Engineer reliable platforms tailored to your operations.",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2400&q=88",
+    alt: "Data visualization charts and analytics",
+    title: "Data Science",
+    description: "Turn complex data into models, dashboards, and decisions.",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=88",
+    alt: "Healthcare professional with digital medical interface",
+    title: "Healthcare Analytics",
+    description: "Adopt data-driven AI tools for medical decisions and operations.",
+  },
 ];
 
 export default function LandingPage() {
@@ -120,27 +162,48 @@ export default function LandingPage() {
         />
       </div>
 
-      <section ref={heroRef} className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:py-28">
-        <motion.div initial="hidden" animate="visible" variants={stagger} style={{ y: heroTextY }}>
+      <section
+        ref={heroRef}
+        className="relative mx-auto grid max-w-7xl min-h-0 items-center gap-12 px-5 py-16 sm:gap-14 sm:py-20 lg:min-h-[min(100dvh,56rem)] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.88fr)] lg:items-center lg:gap-x-12 lg:gap-y-10 lg:px-8 lg:py-24 xl:min-h-[min(92dvh,60rem)] xl:grid-cols-[minmax(0,1.22fr)_minmax(0,0.78fr)] xl:gap-x-16"
+      >
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={stagger}
+          style={{ y: heroTextY }}
+          className="flex max-w-none flex-col lg:max-w-[min(100%,40rem)] xl:max-w-[44rem] xl:pr-2"
+        >
           <motion.div variants={fadeUp}>
             <Link
               href="/ai-agents"
-              className="mb-7 inline-flex items-center gap-2 rounded-full border border-[rgba(0,17,141,0.18)] bg-surface px-4 py-2 text-sm font-semibold text-primary-strong shadow-sm shadow-[rgba(10,89,194,0.15)] transition hover:bg-[#ecf2ff]"
+              className="mb-8 inline-flex items-center gap-2 rounded-full border border-[rgba(0,17,141,0.18)] bg-surface px-4 py-2.5 text-sm font-semibold text-primary-strong shadow-sm shadow-[rgba(10,89,194,0.15)] transition hover:bg-[#ecf2ff] sm:text-[0.9375rem]"
             >
-              <Bot className="h-4 w-4" /> Meet the AI Agent Store
+              <Bot className="h-4 w-4 shrink-0" /> Meet the AI Agent Store
             </Link>
           </motion.div>
-          <motion.h1 variants={fadeUp} className="max-w-4xl text-5xl font-black leading-[0.98] tracking-tight text-(--color-text) md:text-7xl">
+          <motion.h1
+            variants={fadeUp}
+            className="text-[2.35rem] font-black leading-[1.02] tracking-tight text-(--color-text) sm:text-5xl sm:leading-[0.99] md:text-6xl lg:text-[clamp(2.75rem,4.2vw,4.5rem)] lg:leading-[0.98] xl:text-[clamp(3.25rem,4.6vw,5rem)]"
+          >
             Next-Gen Custom <span className="bg-gradient-to-r from-primary-strong via-primary to-[#5c9dff] bg-clip-text text-transparent">AI & Tech Solutions</span> for Startups, SMEs & Enterprises.
           </motion.h1>
-          <motion.p variants={fadeUp} className="mt-7 max-w-2xl text-lg leading-8 text-muted">
+          <motion.p
+            variants={fadeUp}
+            className="mt-8 max-w-xl text-base leading-relaxed text-muted sm:mt-9 sm:max-w-2xl sm:text-lg sm:leading-8 md:text-xl md:leading-9"
+          >
             Build AI products, agentic workflows, blockchain ecosystems, IoT platforms, CRM automation, and high-performing apps with a future-ready engineering partner.
           </motion.p>
-          <motion.div variants={fadeUp} className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a href="#contact" className="group rounded-full px-7 py-4 text-center font-bold text-surface shadow-lg shadow-[rgba(10,89,194,0.25)] transition hover:opacity-95 bg-button-primary">
-              Discuss Your Goals <ArrowRight className="ml-2 inline h-5 w-5 transition group-hover:translate-x-1" />
+          <motion.div variants={fadeUp} className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-5">
+            <a
+              href="#contact"
+              className="group inline-flex min-h-[3.25rem] items-center justify-center rounded-full px-8 py-4 text-center text-base font-bold text-surface shadow-lg shadow-[rgba(10,89,194,0.25)] transition hover:opacity-95 sm:min-h-0 sm:px-9 sm:py-4 sm:text-[1.05rem] bg-button-primary"
+            >
+              Discuss Your Goals <ArrowRight className="ml-2 inline h-5 w-5 shrink-0 transition group-hover:translate-x-1" />
             </a>
-            <a href="#case-studies" className="rounded-full border border-[rgba(0,17,141,0.18)] bg-surface px-7 py-4 text-center font-semibold text-primary-strong transition hover:bg-[#ecf2ff]">
+            <a
+              href="#case-studies"
+              className="inline-flex min-h-[3.25rem] items-center justify-center rounded-full border border-[rgba(0,17,141,0.18)] bg-surface px-8 py-4 text-center text-base font-semibold text-primary-strong transition hover:bg-[#ecf2ff] sm:min-h-0 sm:px-9 sm:py-4 sm:text-[1.05rem]"
+            >
               View Case Studies
             </a>
           </motion.div>
@@ -150,7 +213,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9 }}
-          className="relative h-[560px]"
+          className="relative mx-auto flex h-[min(420px,78vw)] w-full max-w-[min(100%,28rem)] items-center justify-center sm:h-[min(480px,70vw)] sm:max-w-xl lg:mx-0 lg:h-[min(560px,58vh)] lg:max-w-none xl:h-[min(620px,62vh)]"
         >
           <motion.div
             style={{ opacity: heroGlowOpacity }}
@@ -172,83 +235,22 @@ export default function LandingPage() {
       <TrustedByBar />
       <EngineeringSuccessSection />
       <SolutionsScrollSection />
+      <ExpandableImageShowcase
+        heading="Elevating Global Markets with Future-Focused AI Tech Solutions"
+        subheading="Explore how we combine intelligent systems, cloud-native delivery, and product craft across the domains that move modern enterprises forward."
+        images={marketShowcaseImages}
+      />
+      <AiAgentStoreSection
+        title="75AI Agent Store:"
+        titleAccent="Intelligent AI Agents for Enterprise Transformation"
+        subheading="Deploy AI-powered agents to optimize workflows, process data at scale, and automate operational decisions across sales, legal, finance, HR, and more—with governance built in."
+      />
       <VersatileTechEcosystem />
 
-      <motion.section
-        id="ai-agents"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.16 }}
-        variants={sectionReveal}
-        className="relative border-y border-[rgba(10,89,194,0.14)] bg-surface py-24"
-      >
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[.9fr_1.1fr] lg:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <p className="text-sm font-bold uppercase tracking-[0.35em] text-primary">BlueWay Agent Store</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight text-(--color-text) md:text-6xl">Intelligent AI Agents for Enterprise Transformation</h2>
-            <p className="mt-6 text-lg leading-8 text-muted">Deploy AI-powered agents to handle workflows, support teams, process data, and automate operational decisions across business functions.</p>
-            <Link className="mt-8 inline-flex rounded-full bg-button-primary px-7 py-4 font-bold text-surface shadow-lg shadow-[rgba(10,89,194,0.25)] transition hover:opacity-95" href="/ai-agents">
-              Explore Agents
-            </Link>
-          </motion.div>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid gap-4 sm:grid-cols-2">
-            {agents.map((agent) => (
-              <motion.div variants={cardReveal} whileHover={{ y: -6, scale: 1.02 }} key={agent} className="rounded-3xl border border-[rgba(10,89,194,0.14)] bg-surface p-5 shadow-sm">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[rgba(10,89,194,0.08)] text-primary"><Bot /></div>
-                <p className="font-bold text-(--color-text)">{agent}</p>
-                <p className="mt-2 text-sm text-muted">Automation module for faster execution and fewer manual steps.</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
+      <StickyScrollTabs />
 
-      <SectionIntro eyebrow="Case Studies" title="Proof Through Practical Delivery" text="Selected project patterns showing measurable improvements across AI, Web3, IoT, and healthcare domains." />
-      <motion.section
-        id="case-studies"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.15 }}
-        variants={stagger}
-        className="mx-auto grid max-w-7xl gap-5 px-5 pb-20 md:grid-cols-2 lg:grid-cols-4 lg:px-8"
-      >
-        {cases.map(([cat, desc, metric, label]) => (
-          <motion.article key={cat} variants={cardReveal} whileHover={{ y: -8, scale: 1.02, rotate: -1.2 }} className="group rounded-[2rem] border border-[rgba(10,89,194,0.14)] bg-surface p-6 shadow-md transition hover:border-[rgba(10,89,194,0.3)] hover:shadow-xl">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">{cat}</p>
-            <p className="mt-8 min-h-24 text-muted">{desc}</p>
-            <p className="mt-8 text-5xl font-black text-primary-strong">{metric}</p>
-            <p className="mt-2 font-semibold text-primary-strong">{label}</p>
-            <button type="button" className="mt-8 inline-flex items-center gap-2 font-bold text-primary-strong">
-              View Case Study <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-            </button>
-          </motion.article>
-        ))}
-      </motion.section>
 
-      <motion.section
-        id="industries"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.14 }}
-        variants={sectionReveal}
-        className="mx-auto max-w-7xl px-5 py-20 lg:px-8"
-      >
-        <div className="grid gap-10 lg:grid-cols-[.7fr_1.3fr]">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.35em] text-primary">Industries</p>
-            <h2 className="mt-4 text-4xl font-black text-(--color-text) md:text-5xl">Tailored AI Solutions for High-Growth Markets</h2>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {industries.map((item) => (
-              <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }} whileHover={{ y: -8, scale: 1.03, rotate: 0.8 }} key={item} className="rounded-3xl border border-[rgba(10,89,194,0.14)] bg-surface p-5 shadow-sm">
-                <ShieldCheck className="mb-8 h-8 w-8 text-primary" />
-                <p className="font-bold text-(--color-text)">{item}</p>
-                <p className="mt-2 text-sm text-muted">Smart apps, automation, analytics, and user-first digital experiences.</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+      <IndustrySolutions />
 
       <motion.section
         initial="hidden"
