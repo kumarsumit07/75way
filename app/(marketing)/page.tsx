@@ -38,6 +38,7 @@ import { IndustrySolutions } from "@/components/IndustrySolutions";
 import { EngagementModels } from "@/components/EngagementModels";
 import { AccoladesSlider } from "@/components/AccoladesSlider";
 import { ClientStories } from "@/components/ClientStories";
+import { TechStorytelling } from "@/components/TechStorytelling";
 
 
 const fadeUp = {
@@ -258,34 +259,7 @@ export default function LandingPage() {
       <AccoladesSlider />
       <ClientStories />
 
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={sectionReveal}
-        className="border-y border-[rgba(10,89,194,0.14)] bg-surface py-20"
-      >
-        <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.35em] text-primary">Tech Ecosystem</p>
-              <h2 className="mt-4 max-w-3xl text-4xl font-black text-(--color-text) md:text-5xl">Next-Level Technologies That Drive Real Business Impact</h2>
-            </div>
-            <a href="#contact" className="rounded-full border border-[rgba(10,89,194,0.3)] bg-[rgba(10,89,194,0.08)] px-6 py-3 font-bold text-primary-strong transition hover:bg-[rgba(10,89,194,0.12)]">
-              Discuss Project Now
-            </a>
-          </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {tech.map((item, i) => (
-              <motion.div key={item} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.06 }} whileHover={{ y: -8, scale: 1.02 }} className="rounded-[2rem] border border-[rgba(10,89,194,0.14)] bg-gradient-to-b from-surface to-[rgba(10,89,194,0.04)] p-6 shadow-sm">
-                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[rgba(10,89,194,0.08)] text-primary"><Zap /></div>
-                <h3 className="text-2xl font-black text-(--color-text)">{item}</h3>
-                <p className="mt-4 text-muted">Strategic implementation, scalable architecture, clean UX, and production-ready delivery.</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+      <TechStorytelling />
 
       <motion.section
         id="contact"
