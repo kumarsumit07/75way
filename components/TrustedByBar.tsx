@@ -1,8 +1,15 @@
 "use client";
 
-import React from "react";
+import Image from "next/image";
+import OptimizedImage from "./OptimizedImage";
 
-const TRUST_LOGOS = ["Emerson", "LG", "Stanford University", "Saint Luke's", "Ferrero Rocher"] as const;
+const TRUST_LOGOS = [
+  { name: "Emerson", src: "/images/logos/emerson.png" },
+  { name: "LG", src: "/images/logos/lg.png" },
+  { name: "Stanford University", src: "/images/logos/stanford.png" },
+  { name: "Saint Luke's", src: "/images/logos/stanford.png" },
+  { name: "Ferrero Rocher", src: "/images/logos/emerson.png" },
+] as const;
 
 export function TrustedByBar() {
   return (
@@ -10,13 +17,17 @@ export function TrustedByBar() {
       <div className="site-container flex flex-wrap items-center justify-center gap-6 lg:justify-between">
         <p className="text-sm font-black uppercase tracking-[0.2em] text-primary">Trusted By</p>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-          {TRUST_LOGOS.map((name) => (
-            <span
-              key={name}
-              className="text-center text-sm font-semibold text-muted transition hover:text-primary-strong md:text-base"
-            >
-              {name}
-            </span>
+          {TRUST_LOGOS.map((logo) => (
+            <div key={logo.name} className="relative h-6 w-24 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <OptimizedImage
+                src={logo.src}
+                alt={logo.name}
+                fill
+                priority
+                className="object-contain"
+                sizes="200px"
+              />
+            </div>
           ))}
         </div>
       </div>

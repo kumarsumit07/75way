@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { BrainCircuit, Cpu, LineChart, ShieldCheck, Zap, Cloud, Database } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 interface TechItem {
   id: string;
@@ -17,49 +18,49 @@ const TECH_ITEMS: TechItem[] = [
     id: "ai",
     title: "Artificial Intelligence",
     description: "Our experts at 75way deploy AI models for enhanced decision-making.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/unsplash-1677442136019-21780ecad995.webp",
     icon: BrainCircuit,
   },
   {
     id: "gen-ai",
     title: "Generative AI",
     description: "We implement Gen AI to enhance operational efficiency for SMEs.",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4628c975c?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/unsplash-1639762681485-074b7f938ba0.webp",
     icon: Zap,
   },
   {
     id: "ml",
     title: "Machine Learning",
     description: "Specializing in ML solutions to analyze patterns and predict trends.",
-    image: "https://images.unsplash.com/photo-1555255707-c07966488bc7?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/unsplash-1555066931-4365d14bab8c.webp",
     icon: Cpu,
   },
   {
     id: "blockchain",
     title: "Blockchain",
     description: "Blockchain services for secure transactions and higher business trust.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/unsplash-1639762681485-074b7f938ba0.webp",
     icon: ShieldCheck,
   },
   {
     id: "iot",
     title: "Internet of Things (IoT)",
     description: "Connecting devices through IoT for real-time monitoring and automation.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/unsplash-1518770660439-4636190af475.webp",
     icon: Cloud,
   },
   {
     id: "data-science",
     title: "Data Science",
     description: "Extracting actionable insights to reduce costs and drive revenue growth.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/unsplash-1551288049-bebda4e38f71.webp",
     icon: Database,
   },
   {
     id: "bi",
     title: "Business Intelligence",
     description: "AI-powered BI tools to visualize performance and enhance strategies.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/unsplash-1460925895917-afdab827c52f.webp",
     icon: LineChart,
   },
 ];
@@ -124,10 +125,12 @@ export const TechStorytelling = () => {
                     transition={{ duration: 0.4 }}
                     className="absolute inset-0"
                   >
-                    <img
+                    <OptimizedImage
                       src={TECH_ITEMS[activeIndex].image}
                       alt={TECH_ITEMS[activeIndex].title}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent" />
                   </motion.div>

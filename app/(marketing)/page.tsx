@@ -39,43 +39,43 @@ const stagger = {
 
 const marketShowcaseImages: ShowcaseImageItem[] = [
   {
-    src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2400&q=88",
+    src: "/assets/images/unsplash-1677442136019-21780ecad995.webp",
     alt: "Neural network visualization representing artificial intelligence",
     title: "Artificial Intelligence",
     description: "Create AI & ML-powered apps and intelligent software experiences.",
   },
   {
-    src: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=2400&q=88",
+    src: "/assets/images/unsplash-1639762681485-074b7f938ba0.webp",
     alt: "Blockchain technology and digital finance concept",
     title: "Blockchain Development",
     description: "Build secure on-chain products, wallets, and decentralized workflows.",
   },
   {
-    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=88",
+    src: "/assets/images/unsplash-1518770660439-4636190af475.webp",
     alt: "Connected devices and IoT technology",
     title: "IoT Development",
     description: "Connect devices to deliver smarter IoT solutions at scale.",
   },
   {
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2400&q=88",
+    src: "/assets/images/unsplash-1460925895917-afdab827c52f.webp",
     alt: "Web analytics dashboard on a laptop",
     title: "Web App Development",
     description: "Develop future-ready web apps with crisp UX and performance.",
   },
   {
-    src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2400&q=88",
+    src: "/assets/images/unsplash-1555066931-4365d14bab8c.webp",
     alt: "Software development and programming code",
     title: "Custom Software",
     description: "Engineer reliable platforms tailored to your operations.",
   },
   {
-    src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2400&q=88",
+    src: "/assets/images/unsplash-1551288049-bebda4e38f71.webp",
     alt: "Data visualization charts and analytics",
     title: "Data Science",
     description: "Turn complex data into models, dashboards, and decisions.",
   },
   {
-    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=88",
+    src: "/assets/images/unsplash-1576091160399-112ba8d25d1d.webp",
     alt: "Healthcare professional with digital medical interface",
     title: "Healthcare Analytics",
     description: "Adopt data-driven AI tools for medical decisions and operations.",

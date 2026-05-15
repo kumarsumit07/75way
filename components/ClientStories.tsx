@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Play, Quote, User } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 interface Testimonial {
   id: string;
@@ -24,7 +25,7 @@ const STORIES: Testimonial[] = [
     headline: "A Positive Experience from the Beginning",
     tag: "Legacy Transformation",
     story: "Working with 75way was a positive experience from the start. We needed to upgrade our legacy Ruby solution and make critical infrastructure improvements. They were thorough in their review of our requirements, and their communication was exceptional throughout the entire process.",
-    videoThumb: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
+    videoThumb: "/assets/images/unsplash-1560250097-0b93528c311a.webp",
   },
   {
     id: "2",
@@ -34,7 +35,7 @@ const STORIES: Testimonial[] = [
     headline: "Thorough Implementation & Flexibility",
     tag: "Angular Scalability",
     story: "75way completed the job expanding our Angular front-end code within the initially-estimated time. They were thorough in their implementation of our specifications and flexible enough to understand incomplete definitions defined across multiple sources.",
-    videoThumb: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+    videoThumb: "/assets/images/unsplash-1519085360753-af0119f7cbe7.webp",
   },
   {
     id: "3",
@@ -44,7 +45,7 @@ const STORIES: Testimonial[] = [
     headline: "Proactive Problem Solving",
     tag: "Backend Optimization",
     story: "The team at 75way was proactive and could anticipate potential roadblocks before they became major issues. Their approach to work is truly commendable, always looking for ways to improve the final product beyond the initial scope.",
-    videoThumb: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    videoThumb: "/assets/images/unsplash-1507003211169-0a1dd7228f2d.webp",
   },
 ];
 
@@ -163,10 +164,12 @@ export const ClientStories = () => {
               {/* Right Side: Video Card */}
               <div className="relative rounded-[2.5rem] overflow-hidden group cursor-pointer shadow-2xl">
                 <div className="absolute inset-0 bg-slate-900">
-                  <img 
-                    src={story.videoThumb} 
-                    alt={story.name} 
-                    className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 ease-out"
+                  <OptimizedImage
+                    src={story.videoThumb}
+                    alt={story.name}
+                    fill
+                    className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </div>
                 

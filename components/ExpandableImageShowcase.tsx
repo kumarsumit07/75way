@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import OptimizedImage from "./OptimizedImage";
 import React, { useMemo, useState } from "react";
 import {
   motion,
@@ -164,7 +164,7 @@ export function ExpandableImageShowcase({
                     transition={springSoft}
                     style={{ transformOrigin: "center center" }}
                   >
-                    <Image
+                    <OptimizedImage
                       src={item.src}
                       alt={item.alt}
                       fill

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -9,8 +10,7 @@ type InsightCard = {
   overlay: string;
   title: string;
   author: string;
-  /** CSS background for the image strip (blue-forward gradients). */
-  imageGradient: string;
+  image: string;
 };
 
 const INSIGHT_CARDS: InsightCard[] = [
@@ -19,24 +19,21 @@ const INSIGHT_CARDS: InsightCard[] = [
     overlay: "WHAT IS AI DEVELOPMENT? COMPLETE BEGINNER GUIDE",
     title: "What is AI Development? Complete Beginner Guide",
     author: "by Salony Gupta",
-    imageGradient:
-      "linear-gradient(135deg, #001a5c 0%, #0a59c2 45%, #003484 100%), radial-gradient(ellipse 80% 60% at 80% 20%, rgba(255,255,255,0.18), transparent)",
+    image: "/images/insights/beginner-guide.png",
   },
   {
     id: "ai-agents-usa",
     overlay: "HOW AI AGENTS AUTOMATE SALES, SUPPORT & OPERATIONS IN USA COMPANIES",
     title: "How AI Agents Automate Sales, Support & Operations in US Companies",
     author: "by Salony Gupta",
-    imageGradient:
-      "linear-gradient(145deg, #000f4a 0%, #0848cf 50%, #00118d 100%), radial-gradient(ellipse 70% 50% at 10% 80%, rgba(120,180,255,0.25), transparent)",
+    image: "/images/insights/ai-agents.png",
   },
   {
     id: "ai-scale-usa",
     overlay: "HOW AI DEVELOPMENT HELPS US COMPANIES SCALE FASTER COMPLETE GUIDE",
     title: "How AI Development Helps US Companies Scale Faster: A Complete Guide",
     author: "by Salony Gupta",
-    imageGradient:
-      "linear-gradient(125deg, #003484 0%, #0a59c2 40%, #000650 100%), radial-gradient(circle at 50% 0%, rgba(255,255,255,0.2), transparent 55%)",
+    image: "/images/insights/scaling-business.png",
   },
 ];
 
@@ -86,19 +83,24 @@ export function ExpertInsightsSection() {
               style={{ transform: "translateZ(0)" }}
             >
               <Link href="/resources" className="flex flex-1 flex-col text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#00145a]">
-                <div
-                  className="relative isolate min-h-[200px] overflow-hidden px-5 pb-14 pt-5 sm:min-h-[220px] sm:px-6 sm:pb-16 sm:pt-6"
-                  style={{ backgroundImage: card.imageGradient, backgroundBlendMode: "normal, screen" }}
-                >
+                <div className="relative isolate min-h-[200px] overflow-hidden sm:min-h-[220px]">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,rgba(0,10,50,0.75)_100%)]" />
 
-                  <p className="relative z-10 text-right text-[0.65rem] font-black tracking-[0.2em] text-white/95 sm:text-xs">
-                    75WAY
-                  </p>
+                  <div className="relative z-10 p-5 sm:p-6">
+                    <p className="text-right text-[0.65rem] font-black tracking-[0.2em] text-white/95 sm:text-xs">
+                      75WAY
+                    </p>
 
-                  <p className="relative z-10 mt-6 text-[0.8125rem] font-black uppercase leading-snug tracking-wide text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)] sm:mt-8 sm:text-sm sm:leading-snug lg:text-[0.9375rem]">
-                    {card.overlay}
-                  </p>
+                    <p className="mt-6 text-[0.8125rem] font-black uppercase leading-snug tracking-wide text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)] sm:mt-8 sm:text-sm sm:leading-snug lg:text-[0.9375rem]">
+                      {card.overlay}
+                    </p>
+                  </div>
 
                   <span className="absolute bottom-4 left-5 z-10 inline-flex rounded-md border border-white/25 bg-white px-2.5 py-1 text-[0.6rem] font-black uppercase tracking-wider text-primary sm:left-6 sm:px-3 sm:text-[0.65rem]">
                     Artificial Intelligence

@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 interface Accolade {
   id: string;
@@ -13,13 +14,13 @@ interface Accolade {
 }
 
 const ACCOLADES: Accolade[] = [
-  { id: "1", name: "TopDevelopers", award: "Top Mobile App Developers", logo: "TD", rating: 5 },
-  { id: "2", name: "Techreviewer", award: "Top AI Companies 2024", logo: "TR", rating: 5 },
-  { id: "3", name: "SoftwareWorld", award: "Top Rated App Dev US", logo: "SW", rating: 5 },
-  { id: "4", name: "Clutch", award: "Top Artificial Intelligence", logo: "CL", rating: 5 },
-  { id: "5", name: "AI Agents", award: "Featured on AI Directory", logo: "AA", rating: 5 },
-  { id: "6", name: "GoodFirms", award: "Top Big Data Analytics", logo: "GF", rating: 5 },
-  { id: "7", name: "AppFutura", award: "Top Web Developers", logo: "AF", rating: 5 },
+  { id: "1", name: "TopDevelopers", award: "Top Mobile App Developers", logo: "/assets/images/unsplash-1560179707-f14e90ef3623.webp", rating: 5 },
+  { id: "2", name: "Techreviewer", award: "Top AI Companies 2024", logo: "/assets/images/unsplash-1551434678-e076c223a692.webp", rating: 5 },
+  { id: "3", name: "SoftwareWorld", award: "Top Rated App Dev US", logo: "/assets/images/unsplash-1559136555-9303baea8ebd.webp", rating: 5 },
+  { id: "4", name: "Clutch", award: "Top Artificial Intelligence", logo: "/assets/images/unsplash-1516321318423-f06f85e504b3.webp", rating: 5 },
+  { id: "5", name: "AI Agents", award: "Featured on AI Directory", logo: "/assets/images/unsplash-1677442136019-21780ecad995.webp", rating: 5 },
+  { id: "6", name: "GoodFirms", award: "Top Big Data Analytics", logo: "/assets/images/unsplash-1460925895917-afdab827c52f.webp", rating: 5 },
+  { id: "7", name: "AppFutura", award: "Top Web Developers", logo: "/assets/images/unsplash-1551288049-bebda4e38f71.webp", rating: 5 },
 ];
 
 // Use 3x array for infinite looping
@@ -90,7 +91,7 @@ export const AccoladesSlider = () => {
   }, [controls, step]);
 
   return (
-    <section className="bg-white py-16 lg:py-24 overflow-hidden relative border-t border-slate-100">
+    <section className="bg-white py-16 lg:py-24 overflow-hidden relative">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12 lg:mb-16">
           <div className="max-w-2xl">
@@ -121,7 +122,7 @@ export const AccoladesSlider = () => {
                 style={{ width: `${cardWidthPercent}%` }}
               >
                 {/* Full physical card container that moves with the track */}
-                <div className="h-full rounded-[2.5rem] p-8 lg:p-11 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-950 shadow-2xl border border-blue-500/20">
+                <div className="h-full rounded-[2.5rem] p-8 lg:p-11 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-950 border border-blue-500/20">
                   <div className="flex flex-col items-center text-center space-y-10 h-full">
                     <div className="h-28 w-full flex flex-col items-center justify-center relative">
                       <div className="absolute inset-0 opacity-25 flex justify-between px-1">
@@ -132,7 +133,14 @@ export const AccoladesSlider = () => {
                            <path d="M6,21C6,21 2,13 2,12C2,11 6,3 6,3C6,3 5,11 5,12C5,13 6,21 6,21Z" />
                          </svg>
                       </div>
-                      <div className="relative z-10 text-3xl font-black text-white tracking-tighter drop-shadow-lg">{item.logo}</div>
+                      <div className="relative z-10 h-16 w-16 overflow-hidden rounded-full border-2 border-white/40 bg-white/10 p-2 shadow-xl">
+                        <OptimizedImage
+                          src={item.logo}
+                          alt={item.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                       <div className="text-[10px] font-black text-blue-300 uppercase tracking-[0.25em] mt-5 leading-tight max-w-[90%] mx-auto">{item.award}</div>
                     </div>
                     <div className="flex gap-1.5 py-1">

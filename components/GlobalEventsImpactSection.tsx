@@ -1,33 +1,33 @@
 "use client";
 
-import Image from "next/image";
+import OptimizedImage from "./OptimizedImage";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const EVENT_IMAGES: { src: string; alt: string }[] = [
   {
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&auto=format&fit=crop",
+    src: "/assets/images/unsplash-1540575467063-178a50c2df87.webp",
     alt: "Technology conference exhibition floor",
   },
   {
-    src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80&auto=format&fit=crop",
+    src: "/assets/images/unsplash-1505373877841-8d25f7d46678.webp",
     alt: "Business professionals at a global tech event",
   },
   {
-    src: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80&auto=format&fit=crop",
+    src: "/assets/images/unsplash-1515187029135-18ee286d815b.webp",
     alt: "Team collaborating at a trade show booth",
   },
   {
-    src: "https://images.unsplash.com/photo-1524178232363-1fc2d075665c?w=800&q=80&auto=format&fit=crop",
+    src: "/assets/images/unsplash-1522869635100-9f4c5e86aa37.webp",
     alt: "Enterprise meeting at an innovation summit",
   },
   {
-    src: "https://images.unsplash.com/photo-1598484608138-10aa277d3347?w=800&q=80&auto=format&fit=crop",
+    src: "/assets/images/unsplash-1560250097-0b93528c311a.webp",
     alt: "Partners discussing digital solutions at an event",
   },
   {
-    src: "https://images.unsplash.com/photo-1517245385007-4d6707a65f7f?w=800&q=80&auto=format&fit=crop",
+    src: "/assets/images/unsplash-1507003211169-0a1dd7228f2d.webp",
     alt: "Conference networking and product showcase",
   },
 ];
@@ -126,7 +126,7 @@ export function GlobalEventsImpactSection() {
               whileHover={reduceMotion ? undefined : { scale: 1.02 }}
               transition={{ type: "spring", stiffness: 380, damping: 28 }}
             >
-              <Image
+              <OptimizedImage
                 src={img.src}
                 alt={img.alt}
                 fill

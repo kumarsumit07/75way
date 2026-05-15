@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "images:collect": "node scripts/collect-unsplash-urls.js > images-to-download.json",
+    "images:download": "node scripts/download-and-optimize.js images-to-download.json"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
@@ -26,6 +28,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "node-fetch": "^2.6.7",
+    "sharp": "^0.32.0"
   }
 }

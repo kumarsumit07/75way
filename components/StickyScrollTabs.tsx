@@ -8,7 +8,7 @@ import {
   AnimatePresence,
   useSpring,
 } from "framer-motion";
-import Image from "next/image";
+import OptimizedImage from "./OptimizedImage";
 import { ArrowRight, ChevronDown, CheckCircle2 } from "lucide-react";
 
 /**
@@ -34,7 +34,7 @@ const TABS: TabData[] = [
     content: "We created an AI-enabled platform that converted customer interactions into case studies and testimonials.",
     metric: "+35%",
     metricLabel: "Deal Conversions",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=90",
+    image: "/assets/images/unsplash-1551288049-bebda4e38f71.webp",
   },
   {
     id: "blockchain",
@@ -44,7 +44,7 @@ const TABS: TabData[] = [
     content: "A decentralized finance (DeFi) web app to enable secure on-chain lending and real-world credit access.",
     metric: "+60%",
     metricLabel: "Smoother Operations",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1600&q=90",
+    image: "/assets/images/unsplash-1639762681485-074b7f938ba0.webp",
   },
   {
     id: "iot-solutions",
@@ -54,7 +54,7 @@ const TABS: TabData[] = [
     content: "75way built an IOT-based app to control paddle machines and transform training into automated sessions.",
     metric: "1200+",
     metricLabel: "Completed Sessions",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=90",
+    image: "/assets/images/unsplash-1518770660439-4636190af475.webp",
   },
   {
     id: "ott-solution",
@@ -64,7 +64,7 @@ const TABS: TabData[] = [
     content: "We crafted an OTT web app to simplify video management, analytics, and subscriptions for creators.",
     metric: "+47%",
     metricLabel: "Wider Reach",
-    image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=1600&q=90",
+    image: "/assets/images/unsplash-1522869635100-9f4c5e86aa37.webp",
   },
   {
     id: "fitness",
@@ -74,7 +74,7 @@ const TABS: TabData[] = [
     content: "We crafted a custom healthcare solution with a unified web and app to transform patient engagement.",
     metric: "+62%",
     metricLabel: "Workflow Optimization",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=90",
+    image: "/assets/images/unsplash-1505373877841-8d25f7d46678.webp",
   },
   {
     id: "healthcare",
@@ -84,7 +84,7 @@ const TABS: TabData[] = [
     content: "Digital health ecosystem facilitating seamless doctor-patient communication and records management.",
     metric: "99.9%",
     metricLabel: "Data Accuracy",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=90",
+    image: "/assets/images/unsplash-1531297484001-80022131f5a1.webp",
   },
   {
     id: "real-estate",
@@ -94,7 +94,7 @@ const TABS: TabData[] = [
     content: "Next-gen property platform with VR tours and smart contract-based transaction processing.",
     metric: "10x",
     metricLabel: "Faster Closings",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=90",
+    image: "/assets/images/unsplash-1499951360447-b19be8fe80f5.webp",
   },
   {
     id: "enterprise",
@@ -104,7 +104,7 @@ const TABS: TabData[] = [
     content: "Comprehensive ERP transformation for global supply chains with real-time AI forecasting.",
     metric: "-22%",
     metricLabel: "Operational Costs",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=90",
+    image: "/assets/images/unsplash-1555066931-4365d14bab8c.webp",
   },
 ];
 
@@ -135,7 +135,7 @@ export function StickyScrollTabs() {
   return (
     <section 
       ref={containerRef} 
-      className="relative z-10 bg-[#fafcff]" 
+      className="relative z-10 bg-white" 
       style={{ height: `${TABS.length * 150}vh` }}
     >
       <div className="sticky top-0 h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-16 overflow-hidden">
@@ -147,8 +147,7 @@ export function StickyScrollTabs() {
         </div>
 
         {/* 
-            Premium Glassmorphic Card Container:
-            Refined scaling to fit 100% zoom perfectly.
+            Premium Glassmorphic Card Container
         */}
         <motion.div 
           className="relative z-10 w-full max-w-[92rem] h-[82vh] lg:h-[78vh] max-h-[720px] rounded-[2.5rem] lg:rounded-[3.5rem] border border-white/60 bg-white/40 backdrop-blur-3xl shadow-[0_48px_96px_-24px_rgba(0,40,120,0.1)] flex flex-col"
@@ -207,33 +206,32 @@ export function StickyScrollTabs() {
                   key={activeIndex}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6 }}
+                  exit={{ opacity: 0, filter: "blur(10px)", transition: { duration: 0.3 } }}
+                  transition={{ duration: 0.5 }}
                   className="absolute inset-0 flex flex-col lg:flex-row"
                 >
                   {/* Left Side: Immersive Media */}
-                  <div className="w-full lg:w-1/2 h-full relative overflow-hidden bg-slate-50">
+                  <div className="w-full lg:w-1/2 h-full relative overflow-hidden bg-slate-100">
                     <motion.div
-                      initial={{ scale: 1.05 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 1.2 }}
+                      initial={{ scale: 1.08, opacity: 0.4, filter: "blur(16px)" }}
+                      animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
+                      transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                       className="absolute inset-0"
                     >
-                      <Image 
-                        src={TABS[activeIndex].image} 
-                        fill 
-                        className="object-cover" 
+                      <OptimizedImage
+                        src={TABS[activeIndex].image}
+                        fill
+                        className="object-cover"
                         alt={TABS[activeIndex].title}
                         priority
                       />
-                      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-white/5" />
                     </motion.div>
 
-                    {/* Glass Metric Badge - Scaled Down */}
+                    {/* Glass Metric Badge */}
                     <motion.div 
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3, duration: 0.6 }}
+                      initial={{ opacity: 0, scale: 0.95, filter: "blur(12px)" }}
+                      animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                      transition={{ delay: 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
                       className="absolute bottom-10 left-10 lg:bottom-14 lg:left-14 bg-white/30 backdrop-blur-3xl p-8 lg:p-10 rounded-[2rem] lg:rounded-[3rem] border border-white/40 shadow-xl min-w-[180px] lg:min-w-[240px]"
                     >
                       <span className="text-5xl lg:text-7xl font-black text-white tracking-tighter leading-none tabular-nums drop-shadow-xl">
@@ -245,14 +243,12 @@ export function StickyScrollTabs() {
                     </motion.div>
                   </div>
 
-                  {/* Right Side: Refined Content Area */}
-                  <div className="w-full lg:w-1/2 h-full flex flex-col justify-center p-8 lg:p-16 relative">
-                    <div className="absolute inset-0 bg-white/5 backdrop-blur-[1px] -z-10" />
-                    
+                  {/* Right Side: Content Area */}
+                  <div className="w-full lg:w-1/2 h-full flex flex-col justify-center p-8 lg:p-16 relative bg-white">
                     <motion.div 
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6 }}
+                      initial={{ opacity: 0, scale: 0.98, filter: "blur(10px)" }}
+                      animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                      transition={{ delay: 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
                       className="flex flex-col gap-8 lg:gap-10"
                     >
                       <div className="space-y-6 lg:space-y-8">
@@ -289,11 +285,11 @@ export function StickyScrollTabs() {
               </AnimatePresence>
             </div>
             
-            {/* Bottom Gradient Overlay for smoother transition to border */}
+            {/* Bottom Gradient Overlay */}
             <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white/20 to-transparent pointer-events-none z-30" />
           </div>
 
-          {/* Bottom Action Area - Centered & Overlapping Border matching reference */}
+          {/* Bottom Action Area */}
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-50 flex items-center gap-5">
             <button 
               onClick={() => {

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import OptimizedImage from "./OptimizedImage";
 import { ArrowUpRight } from "lucide-react";
 
 interface IndustryCardProps {
@@ -26,7 +26,7 @@ const IndustryCard = ({ title, image, tags, delay }: IndustryCardProps) => {
       className="group relative h-[450px] w-full overflow-hidden rounded-[2.5rem] bg-slate-100 shadow-xl transition-all duration-500 hover:shadow-[0_40px_80px_-16px_rgba(37,99,235,0.2)]"
     >
       {/* Background Image */}
-      <Image
+      <OptimizedImage
         src={image}
         alt={title}
         fill
@@ -79,32 +79,32 @@ const IndustryCard = ({ title, image, tags, delay }: IndustryCardProps) => {
 const INDUSTRIES = [
   {
     title: "Healthcare",
-    image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/unsplash-1584036561566-baf8f5f1b144.webp",
     tags: ["AI Diagnostics", "Telemedicine Software", "Healthcare CRM"],
   },
   {
     title: "Real Estate",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/unsplash-1560518883-ce09059eeffa.webp",
     tags: ["Real Estate CRM", "Smart Home App", "AI Chatbot Support"],
   },
   {
     title: "E-commerce",
-    image: "https://images.unsplash.com/photo-1556742049-04ff4d0ca04b?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/unsplash-1560250097-0b93528c311a.webp",
     tags: ["E-commerce App", "Online Marketplace", "AI Recommendations"],
   },
   {
     title: "Fintech",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/unsplash-1563986768609-322da13575f3.webp",
     tags: ["AI-enabled Banking", "Crypto Wallet App", "Insurance App"],
   },
   {
     title: "Logistics",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/unsplash-1586528116311-ad8dd3c8310d.webp",
     tags: ["AI Fleet Tracking", "E-Mobility Solutions", "Food Delivery App"],
   },
   {
     title: "Education",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/unsplash-1509062522246-3755977927d7.webp",
     tags: ["AI Tutoring Platforms", "E-Learning Platform", "Virtual Classroom"],
   },
 ];

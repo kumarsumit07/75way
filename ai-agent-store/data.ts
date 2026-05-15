@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import type { AgentCategory } from "./types";
 
-const img = (photoId: string, w = 1800) =>
-  `https://images.unsplash.com/photo-${photoId}?auto=format&fit=crop&w=${w}&q=88`;
+const img = (photoId: string, w = 1200) =>
+  `https://images.unsplash.com/photo-${photoId}?auto=format&fit=crop&w=${w}&q=80`;
 
 /** Rotating dashboard / tablet style shots for variety. */
 const P = {
@@ -21,10 +21,10 @@ const P = {
   dash3: img("1551434678-e076c223a692"),
   tablet1: img("1517245383298-b4e0547e8e44"),
   tablet2: img("1522071820081-009f0129c71c"),
-  office: img("1497215728101-856f4ea74a97"),
+  office: img("1499951360447-b19be8fe80f5"),
   laptop: img("1454165804606-c3d57bc86b40"),
-  data: img("1543286386-713bdd548c4e"),
-  meeting: img("1542744173-05336fcc1adb"),
+  data: img("1560250097-0b93528c311a"),
+  meeting: img("1515187029135-18ee286d815b"),
   finance: img("1554224154-6726b3ff858f"),
   health: img("1576091160399-112ba8d25d1d"),
   code: img("1555066931-4365d14bab8c"),

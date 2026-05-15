@@ -1,0 +1,399 @@
+﻿[
+  
+  {
+    "id": 2,
+    "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2400&q=88",
+    "files": [
+      "app\\(marketing)\\page.tsx"
+    ]
+  },
+  {
+    "id": 3,
+    "url": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=2400&q=88",
+    "files": [
+      "app\\(marketing)\\page.tsx"
+    ]
+  },
+  {
+    "id": 4,
+    "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=88",
+    "files": [
+      "app\\(marketing)\\page.tsx"
+    ]
+  },
+  {
+    "id": 5,
+    "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2400&q=88",
+    "files": [
+      "app\\(marketing)\\page.tsx"
+    ]
+  },
+  {
+    "id": 6,
+    "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2400&q=88",
+    "files": [
+      "app\\(marketing)\\page.tsx"
+    ]
+  },
+  {
+    "id": 7,
+    "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2400&q=88",
+    "files": [
+      "app\\(marketing)\\page.tsx"
+    ]
+  },
+  {
+    "id": 8,
+    "url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=88",
+    "files": [
+      "app\\(marketing)\\page.tsx"
+    ]
+  },
+  {
+    "id": 9,
+    "url": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=120&q=80",
+    "files": [
+      "components\\AccoladesSlider.tsx"
+    ]
+  },
+  {
+    "id": 10,
+    "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=120&q=80",
+    "files": [
+      "components\\AccoladesSlider.tsx"
+    ]
+  },
+  {
+    "id": 11,
+    "url": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=120&q=80",
+    "files": [
+      "components\\AccoladesSlider.tsx"
+    ]
+  },
+  {
+    "id": 12,
+    "url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=120&q=80",
+    "files": [
+      "components\\AccoladesSlider.tsx"
+    ]
+  },
+  {
+    "id": 13,
+    "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=120&q=80",
+    "files": [
+      "components\\AccoladesSlider.tsx"
+    ]
+  },
+  {
+    "id": 14,
+    "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=120&q=80",
+    "files": [
+      "components\\AccoladesSlider.tsx"
+    ]
+  },
+  {
+    "id": 15,
+    "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=120&q=80",
+    "files": [
+      "components\\AccoladesSlider.tsx"
+    ]
+  },
+  {
+    "id": 16,
+    "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts",
+      "components\\TechStorytelling.tsx"
+    ]
+  },
+  {
+    "id": 17,
+    "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts",
+      "components\\TechStorytelling.tsx"
+    ]
+  },
+  {
+    "id": 18,
+    "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 19,
+    "url": "https://images.unsplash.com/photo-1504868584819-f8e90526354e?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts",
+      "components\\StickyScrollTabs.tsx"
+    ]
+  },
+  {
+    "id": 20,
+    "url": "https://images.unsplash.com/photo-1555421689-491a4b829457?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts",
+      "components\\ai-agent-store\\data.ts",
+      "components\\StickyScrollTabs.tsx"
+    ]
+  },
+  {
+    "id": 21,
+    "url": "https://images.unsplash.com/photo-1497215728101-856f4ea74a97?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts",
+      "components\\ai-agent-store\\data.ts",
+      "components\\StickyScrollTabs.tsx"
+    ]
+  },
+  {
+    "id": 22,
+    "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 23,
+    "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 24,
+    "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 25,
+    "url": "https://images.unsplash.com/photo-1543286386-713bdd548c4e?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts",
+      "components\\StickyScrollTabs.tsx"
+    ]
+  },
+  {
+    "id": 26,
+    "url": "https://images.unsplash.com/photo-1552664730-030f2b1402b1?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts",
+      "components\\StickyScrollTabs.tsx"
+    ]
+  },
+  {
+    "id": 27,
+    "url": "https://images.unsplash.com/photo-1542744173-05336fcc1adb?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 28,
+    "url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 29,
+    "url": "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 30,
+    "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 31,
+    "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 32,
+    "url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 33,
+    "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\ai-agent-store\\data.ts"
+    ]
+  },
+  {
+    "id": 34,
+    "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
+    "files": [
+      "components\\ClientStories.tsx"
+    ]
+  },
+  {
+    "id": 35,
+    "url": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+    "files": [
+      "components\\ClientStories.tsx"
+    ]
+  },
+  {
+    "id": 36,
+    "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    "files": [
+      "components\\ClientStories.tsx"
+    ]
+  },
+  {
+    "id": 37,
+    "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&auto=format&fit=crop",
+    "files": [
+      "components\\GlobalEventsImpactSection.tsx"
+    ]
+  },
+  {
+    "id": 38,
+    "url": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80&auto=format&fit=crop",
+    "files": [
+      "components\\GlobalEventsImpactSection.tsx"
+    ]
+  },
+  {
+    "id": 39,
+    "url": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80&auto=format&fit=crop",
+    "files": [
+      "components\\GlobalEventsImpactSection.tsx"
+    ]
+  },
+  {
+    "id": 40,
+    "url": "https://images.unsplash.com/photo-1524178232363-1fc2d075665c?w=800&q=80&auto=format&fit=crop",
+    "files": [
+      "components\\GlobalEventsImpactSection.tsx"
+    ]
+  },
+  {
+    "id": 41,
+    "url": "https://images.unsplash.com/photo-1598484608138-10aa277d3347?w=800&q=80&auto=format&fit=crop",
+    "files": [
+      "components\\GlobalEventsImpactSection.tsx"
+    ]
+  },
+  {
+    "id": 42,
+    "url": "https://images.unsplash.com/photo-1517245385007-4d6707a65f7f?w=800&q=80&auto=format&fit=crop",
+    "files": [
+      "components\\GlobalEventsImpactSection.tsx"
+    ]
+  },
+  {
+    "id": 43,
+    "url": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\IndustrySolutions.tsx"
+    ]
+  },
+  {
+    "id": 44,
+    "url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\IndustrySolutions.tsx"
+    ]
+  },
+  {
+    "id": 45,
+    "url": "https://images.unsplash.com/photo-1556742044-3c52d6e88c02?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\IndustrySolutions.tsx"
+    ]
+  },
+  {
+    "id": 46,
+    "url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\IndustrySolutions.tsx"
+    ]
+  },
+  {
+    "id": 47,
+    "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\IndustrySolutions.tsx"
+    ]
+  },
+  {
+    "id": 48,
+    "url": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\IndustrySolutions.tsx"
+    ]
+  },
+  {
+    "id": 49,
+    "url": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\StickyScrollTabs.tsx",
+      "components\\TechStorytelling.tsx"
+    ]
+  },
+  {
+    "id": 50,
+    "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\StickyScrollTabs.tsx",
+      "components\\TechStorytelling.tsx"
+    ]
+  },
+  {
+    "id": 51,
+    "url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\StickyScrollTabs.tsx"
+    ]
+  },
+  {
+    "id": 52,
+    "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\TechStorytelling.tsx"
+    ]
+  },
+  {
+    "id": 53,
+    "url": "https://images.unsplash.com/photo-1620712943543-bcc4628c975c?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\TechStorytelling.tsx"
+    ]
+  },
+  {
+    "id": 54,
+    "url": "https://images.unsplash.com/photo-1555255707-c07966488bc7?auto=format&fit=crop&w=1200&q=80",
+    "files": [
+      "components\\TechStorytelling.tsx"
+    ]
+  },
+  {
+    "id": 55,
+    "url": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=200&q=80",
+    "files": [
+      "components\\TrustedByBar.tsx"
+    ]
+  },
+  {
+    "id": 56,
+    "url": "https://images.unsplash.com/photo-1549007994-cb92cfd7d4d8?auto=format&fit=crop&w=200&q=80",
+    "files": [
+      "components\\TrustedByBar.tsx"
+    ]
+  }
+]

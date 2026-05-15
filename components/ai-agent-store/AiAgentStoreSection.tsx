@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import OptimizedImage from "../OptimizedImage";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { DEFAULT_AGENT_STORE_CATEGORIES } from "./data";
@@ -124,56 +124,48 @@ function ImagePreviewPanel({
 }) {
   const k = `${categoryId}-${item.id}`;
   return (
-    <div className="relative flex min-h-[260px] flex-1 items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-4 py-8 md:min-h-[360px] md:px-8 md:py-10 lg:min-h-[420px]">
+    <div className="relative flex min-h-[260px] flex-1 items-center justify-center overflow-hidden bg-slate-900 px-4 py-8 md:min-h-[360px] md:px-8 md:py-10 lg:min-h-[420px]">
       <div
-        className="pointer-events-none absolute inset-0 opacity-40"
+        className="pointer-events-none absolute inset-0 opacity-20"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(56,189,248,0.15), transparent 55%), radial-gradient(ellipse 60% 50% at 80% 80%, rgba(10,89,194,0.2), transparent 50%)",
+            "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(56,189,248,0.15), transparent 55%)",
         }}
       />
-      {!reduceMotion ? (
-        <motion.div
-          aria-hidden
-          className="pointer-events-none absolute -left-24 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-sky-500/20 blur-3xl"
-          animate={{ opacity: [0.35, 0.55, 0.35], scale: [1, 1.08, 1] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-      ) : null}
 
       <div className="relative z-[1] w-full max-w-3xl">
-        <AnimatePresence initial={false} mode="wait">
+        <AnimatePresence mode="wait">
           <motion.div
             key={k}
             initial={
               reduceMotion
                 ? { opacity: 0 }
-                : { opacity: 0, y: 14, scale: 0.98 }
+                : { opacity: 0, y: 10, scale: 0.99 }
             }
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={
               reduceMotion
                 ? { opacity: 0 }
-                : { opacity: 0, y: -10, scale: 0.99 }
+                : { opacity: 0, y: -5, scale: 1 }
             }
             transition={{
-              duration: reduceMotion ? 0.2 : 0.38,
+              duration: 0.3,
               ease: [0.32, 0.72, 0, 1],
             }}
-            className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 shadow-[0_24px_80px_-20px_rgba(0,0,0,0.65),0_0_0_1px_rgba(255,255,255,0.06)] ring-1 ring-white/5"
+            className="relative overflow-hidden rounded-2xl border border-white/20 bg-slate-800 shadow-2xl"
           >
             <div className="relative aspect-[16/10] w-full">
-              <Image
+              <OptimizedImage
                 src={item.image}
                 alt={item.imageAlt}
                 fill
-                quality={90}
-                sizes="(max-width: 1024px) 100vw, 800px"
                 className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 800px"
+                priority
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-slate-950/10" />
+              {/* Removed dark gradient overlay for better visibility */}
             </div>
-            <div className="border-t border-white/5 bg-slate-950/40 px-4 py-3 backdrop-blur-sm md:px-5 md:py-3.5">
+            <div className="border-t border-white/10 bg-slate-900/90 px-4 py-3 backdrop-blur-md md:px-5 md:py-3.5">
               <p className="text-sm font-bold text-white md:text-base">
                 {item.title}
               </p>
