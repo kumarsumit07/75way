@@ -144,7 +144,7 @@ export function SolutionsScrollSection() {
     <section 
       ref={containerRef}
       id="solutions" 
-      className="relative mx-auto max-w-7xl px-5 py-32 lg:px-8"
+      className="relative site-container overflow-x-clip py-24 sm:py-28 lg:py-32"
     >
       <div className="mb-24 text-center">
         <motion.p 

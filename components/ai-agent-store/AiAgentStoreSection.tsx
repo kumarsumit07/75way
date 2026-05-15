@@ -236,7 +236,7 @@ export function AiAgentStoreSection({
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(10,89,194,0.06),transparent_55%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative site-container">
         <header className="mx-auto mb-8 max-w-4xl text-center md:mb-10">
           {eyebrow ? (
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500 md:text-base">

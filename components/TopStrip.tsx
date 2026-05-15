@@ -13,7 +13,7 @@ export function TopStrip() {
       transition={{ duration: 0.45 }}
       className="border-b border-blue-200/80 bg-blue-600 text-white"
     >
-      <div className="mx-auto flex max-w-7xl flex-col justify-between gap-2 px-5 py-2 text-sm font-semibold sm:flex-row lg:px-8">
+      <div className="site-container flex flex-col justify-between gap-2 py-2 text-sm font-semibold sm:flex-row">
         <motion.p animate={reduce ? undefined : { x: [0, 6, 0] }} transition={{ duration: 8, repeat: Infinity }}>
           From AI & Agentic AI to IoT & on-demand apps — solutions built for measurable business impact.
         </motion.p>

@@ -361,7 +361,7 @@ export function EngineeringSuccessSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden border-y border-[rgba(10,89,194,0.14)] bg-gradient-to-b from-[#fdfdff] to-white py-16 lg:py-24"
+      className="relative overflow-x-clip border-y border-[rgba(10,89,194,0.14)] bg-gradient-to-b from-[#fdfdff] to-white py-16 lg:py-24"
     >
       <div
         className="pointer-events-none absolute inset-0 flex items-center justify-center text-[clamp(8rem,28vw,18rem)] font-black leading-none text-[rgba(10,89,194,0.06)] select-none"
@@ -370,7 +370,7 @@ export function EngineeringSuccessSection() {
         2000+
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl min-h-[clamp(360px,50vmin,30rem)] items-stretch gap-10 px-5 md:grid-cols-2 md:gap-12 lg:min-h-[clamp(420px,54vmin,38rem)] lg:grid-cols-[1fr_1.05fr] lg:gap-14 xl:min-h-[clamp(460px,56vmin,42rem)] lg:px-8">
+      <div className="relative site-container grid min-h-[clamp(360px,50vmin,30rem)] items-stretch gap-10 md:grid-cols-2 md:gap-12 lg:min-h-[clamp(420px,54vmin,38rem)] lg:grid-cols-[1fr_1.05fr] lg:gap-14 xl:min-h-[clamp(460px,56vmin,42rem)]">
         {/* Donut Chart */}
         <motion.div
           className="order-2 flex h-full min-h-[min(72vw,380px)] w-full items-center justify-center self-center md:min-h-0 lg:order-1"

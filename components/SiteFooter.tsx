@@ -50,7 +50,7 @@ export function SiteFooter() {
       variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.06 } } }}
       className="border-t border-[rgba(255,255,255,0.08)] bg-footer py-14 text-footer-muted"
     >
-      <motion.div variants={stagger} className="mx-auto grid max-w-7xl gap-10 px-5 sm:grid-cols-2 lg:grid-cols-5 lg:px-8">
+      <motion.div variants={stagger} className="site-container grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
         <motion.div variants={fadeUp} className="lg:col-span-1">
           <Link href="/" className="text-2xl font-black text-surface">
             {SITE.name}
@@ -72,7 +72,7 @@ export function SiteFooter() {
           </motion.div>
         ))}
       </motion.div>
-      <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/10 px-5 pt-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <div className="site-container mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
         <div className="flex flex-wrap gap-4">
           <span className="hover:text-slate-300">Sitemap</span>

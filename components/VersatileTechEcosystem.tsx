@@ -300,7 +300,7 @@ export function VersatileTechEcosystem() {
         }}
       />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative site-container">
         <div className="mb-10 lg:mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 16 }}

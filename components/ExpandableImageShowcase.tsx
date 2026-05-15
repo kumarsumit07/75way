@@ -82,7 +82,7 @@ export function ExpandableImageShowcase({
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative site-container">
         {(heading || subheading) && (
           <header className="mb-8 max-w-4xl md:mb-10 lg:mb-12">
             {heading ? (

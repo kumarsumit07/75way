@@ -19,7 +19,7 @@ export function SiteHeader() {
         transition={{ duration: 0.55 }}
         className="sticky top-0 z-50 border-b border-[rgba(0,17,141,0.15)] bg-[rgba(255,255,255,0.92)] backdrop-blur-xl"
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <div className="site-container flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-3">
             <div className="grid h-11 w-11 place-items-center rounded-2xl border border-blue-200 bg-blue-50 shadow-[0_0_24px_rgba(37,99,235,0.12)]">
               <Sparkles className="h-6 w-6 text-blue-600" />

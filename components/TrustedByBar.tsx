@@ -6,8 +6,8 @@ const TRUST_LOGOS = ["Emerson", "LG", "Stanford University", "Saint Luke's", "Fe
 
 export function TrustedByBar() {
   return (
-    <section className="border-y border-[rgba(10,89,194,0.14)] bg-surface py-4 text-(--color-text)">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-6 px-5 lg:justify-between lg:px-8">
+    <section className="overflow-x-clip border-y border-[rgba(10,89,194,0.14)] bg-surface py-5 text-(--color-text) sm:py-6">
+      <div className="site-container flex flex-wrap items-center justify-center gap-6 lg:justify-between">
         <p className="text-sm font-black uppercase tracking-[0.2em] text-primary">Trusted By</p>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
           {TRUST_LOGOS.map((name) => (

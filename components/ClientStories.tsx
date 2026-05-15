@@ -177,7 +177,7 @@ export const ClientStories = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <motion.div 
                     whileHover={{ scale: 1.1 }}
-                    whileActive={{ scale: 0.9 }}
+                    whileTap={{ scale: 0.9 }}
                     className="h-20 w-20 lg:h-24 lg:w-24 rounded-full bg-blue-600 flex items-center justify-center shadow-[0_0_50px_rgba(37,99,235,0.4)] relative"
                   >
                     <div className="absolute inset-0 rounded-full bg-blue-600 animate-ping opacity-20" />

@@ -3,26 +3,7 @@
 import Link from "next/link";
 import React, { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { 
-  BrainCircuit, 
-  Blocks, 
-  Code2, 
-  Globe2, 
-  Database,
-  Cpu,
-  LineChart,
-  Layers,
-  Smartphone,
-  ShieldCheck,
-  Zap,
-  Bot,
-  ArrowRight,
-  Cloud,
-  CheckCircle2,
-  Mail,
-  Phone,
-} from "lucide-react";
-// import { HeroRobotOrbit } from "@/components/HeroRobotOrbit";
+import { ArrowRight, Bot } from "lucide-react";
 import Robot from "@/components/Robot";
 import { TrustedByBar } from "@/components/TrustedByBar";
 import { EngineeringSuccessSection } from "@/components/EngineeringSuccessSection";
@@ -39,7 +20,11 @@ import { EngagementModels } from "@/components/EngagementModels";
 import { AccoladesSlider } from "@/components/AccoladesSlider";
 import { ClientStories } from "@/components/ClientStories";
 import { TechStorytelling } from "@/components/TechStorytelling";
-
+import { UnbeatableBenefitsSection } from "@/components/UnbeatableBenefitsSection";
+import { PremiumFaqSection } from "@/components/PremiumFaqSection";
+import { IgniteVisionContactSection } from "@/components/IgniteVisionContactSection";
+import { ExpertInsightsSection } from "@/components/ExpertInsightsSection";
+import { WorldwideLegacySection } from "@/components/WorldwideLegacySection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -51,48 +36,6 @@ const stagger = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 };
-const sectionReveal = {
-  hidden: { opacity: 0, y: 38 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.75 },
-  },
-};
-
-const cardReveal = {
-  hidden: { opacity: 0, y: 26, scale: 0.97 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.55 } },
-};
-
-
-const agents = [
-  "Lead Management",
-  "Sales Management",
-  "Opportunity Management",
-  "Proposal Automation",
-  "Pricing Intelligence",
-  "Contract Compliance",
-  "Customer Support",
-  "Account Retention",
-];
-
-const cases = [
-  ["AI Solutions", "AI-enabled platform for turning customer interactions into testimonials.", "+35%", "Deal Conversions"],
-  ["Blockchain", "DeFi web app for secure lending and real-world credit workflows.", "+60%", "Smoother Operations"],
-  ["IoT Solutions", "IoT app to control training hardware and automate sports sessions.", "1200+", "Completed Sessions"],
-  ["Healthcare", "Unified healthcare web and app system for better patient engagement.", "+62%", "Workflow Optimization"],
-];
-
-const tech = [
-  "Artificial Intelligence",
-  "Generative AI",
-  "Machine Learning",
-  "Blockchain",
-  "Internet of Things",
-  "Data Science",
-  "Business Intelligence",
-];
 
 const marketShowcaseImages: ShowcaseImageItem[] = [
   {
@@ -150,7 +93,7 @@ export default function LandingPage() {
   const heroGlowOpacity = useTransform(scrollYProgress, [0, 0.6, 1], [0.32, 0.5, 0.24]);
 
   return (
-    <main className="relative min-h-screen bg-page text-(--color-text) selection:bg-[rgba(10,89,194,0.16)] selection:text-(--color-surface)">
+    <main className="relative min-h-screen overflow-x-clip bg-page pb-8 text-(--color-text) selection:bg-[rgba(10,89,194,0.16)] selection:text-(--color-surface) sm:pb-10">
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_0%,rgba(10,89,194,0.14),transparent_44%),radial-gradient(circle_at_88%_6%,rgba(3,80,214,0.12),transparent_38%),linear-gradient(180deg,#fdfdff_0%,#f1f3f7_52%,#ffffff_100%)]" />
         <div className="absolute inset-0 opacity-[0.5] [background-image:linear-gradient(rgba(10,89,194,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(10,89,194,0.05)_1px,transparent_1px)] [background-size:64px_64px]" />
@@ -168,7 +111,7 @@ export default function LandingPage() {
 
       <section
         ref={heroRef}
-        className="relative mx-auto grid max-w-7xl min-h-0 items-center gap-12 px-5 py-16 sm:gap-14 sm:py-20 lg:min-h-[min(100dvh,56rem)] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.88fr)] lg:items-center lg:gap-x-12 lg:gap-y-10 lg:px-8 lg:py-24 xl:min-h-[min(92dvh,60rem)] xl:grid-cols-[minmax(0,1.22fr)_minmax(0,0.78fr)] xl:gap-x-16"
+        className="relative site-container grid min-h-0 items-center gap-10 py-14 sm:gap-12 sm:py-16 lg:min-h-[min(100dvh,56rem)] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.88fr)] lg:items-center lg:gap-x-12 lg:gap-y-10 lg:py-24 xl:min-h-[min(92dvh,60rem)] xl:grid-cols-[minmax(0,1.22fr)_minmax(0,0.78fr)] xl:gap-x-16"
       >
         <motion.div
           initial="hidden"
@@ -180,33 +123,39 @@ export default function LandingPage() {
           <motion.div variants={fadeUp}>
             <Link
               href="/ai-agents"
-              className="mb-8 inline-flex items-center gap-2 rounded-full border border-[rgba(0,17,141,0.18)] bg-surface px-4 py-2.5 text-sm font-semibold text-primary-strong shadow-sm shadow-[rgba(10,89,194,0.15)] transition hover:bg-[#ecf2ff] sm:text-[0.9375rem]"
+              className="mb-7 inline-flex min-h-[2.75rem] items-center gap-2 rounded-full border border-[rgba(0,17,141,0.18)] bg-surface px-4 py-2.5 text-sm font-semibold text-primary-strong shadow-sm shadow-[rgba(10,89,194,0.15)] transition hover:bg-[#ecf2ff] sm:mb-8 sm:min-h-0 sm:px-5 sm:text-[0.9375rem]"
             >
-              <Bot className="h-4 w-4 shrink-0" /> Meet the AI Agent Store
+              <Bot className="h-4 w-4 shrink-0" aria-hidden /> Meet the AI Agent Store
             </Link>
           </motion.div>
           <motion.h1
             variants={fadeUp}
-            className="text-[2.35rem] font-black leading-[1.02] tracking-tight text-(--color-text) sm:text-5xl sm:leading-[0.99] md:text-6xl lg:text-[clamp(2.75rem,4.2vw,4.5rem)] lg:leading-[0.98] xl:text-[clamp(3.25rem,4.6vw,5rem)]"
+            className="text-[clamp(1.875rem,5.5vw,2.35rem)] font-black leading-[1.05] tracking-tight text-(--color-text) sm:text-5xl sm:leading-[0.99] md:text-6xl lg:text-[clamp(2.75rem,4.2vw,4.5rem)] lg:leading-[0.98] xl:text-[clamp(3.25rem,4.6vw,5rem)]"
           >
-            Next-Gen Custom <span className="bg-gradient-to-r from-primary-strong via-primary to-[#5c9dff] bg-clip-text text-transparent">AI & Tech Solutions</span> for Startups, SMEs & Enterprises.
+            Next-Gen Custom{" "}
+            <span className="bg-gradient-to-r from-primary-strong via-primary to-[#5c9dff] bg-clip-text text-transparent">
+              AI & Tech Solutions
+            </span>{" "}
+            for Startups, SMEs & Enterprises.
           </motion.h1>
           <motion.p
             variants={fadeUp}
-            className="mt-8 max-w-xl text-base leading-relaxed text-muted sm:mt-9 sm:max-w-2xl sm:text-lg sm:leading-8 md:text-xl md:leading-9"
+            className="mt-7 max-w-xl text-base leading-relaxed text-muted sm:mt-8 sm:max-w-2xl sm:text-lg sm:leading-8 md:mt-9 md:text-xl md:leading-9"
           >
-            Build AI products, agentic workflows, blockchain ecosystems, IoT platforms, CRM automation, and high-performing apps with a future-ready engineering partner.
+            Build AI products, agentic workflows, blockchain ecosystems, IoT platforms, CRM automation, and high-performing
+            apps with a future-ready engineering partner.
           </motion.p>
-          <motion.div variants={fadeUp} className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-5">
+          <motion.div variants={fadeUp} className="mt-9 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
             <a
               href="#contact"
-              className="group inline-flex min-h-[3.25rem] items-center justify-center rounded-full px-8 py-4 text-center text-base font-bold text-surface shadow-lg shadow-[rgba(10,89,194,0.25)] transition hover:opacity-95 sm:min-h-0 sm:px-9 sm:py-4 sm:text-[1.05rem] bg-button-primary"
+              className="group inline-flex min-h-[3rem] items-center justify-center rounded-full px-7 py-3.5 text-center text-base font-bold text-surface shadow-lg shadow-[rgba(10,89,194,0.25)] transition hover:opacity-95 sm:min-h-[3.25rem] sm:px-9 sm:py-4 sm:text-[1.05rem] bg-button-primary"
             >
-              Discuss Your Goals <ArrowRight className="ml-2 inline h-5 w-5 shrink-0 transition group-hover:translate-x-1" />
+              Discuss Your Goals{" "}
+              <ArrowRight className="ml-2 inline h-5 w-5 shrink-0 transition group-hover:translate-x-1" aria-hidden />
             </a>
             <a
               href="#case-studies"
-              className="inline-flex min-h-[3.25rem] items-center justify-center rounded-full border border-[rgba(0,17,141,0.18)] bg-surface px-8 py-4 text-center text-base font-semibold text-primary-strong transition hover:bg-[#ecf2ff] sm:min-h-0 sm:px-9 sm:py-4 sm:text-[1.05rem]"
+              className="inline-flex min-h-[3rem] items-center justify-center rounded-full border border-[rgba(0,17,141,0.18)] bg-surface px-7 py-3.5 text-center text-base font-semibold text-primary-strong transition hover:bg-[#ecf2ff] sm:min-h-[3.25rem] sm:px-9 sm:py-4 sm:text-[1.05rem]"
             >
               View Case Studies
             </a>
@@ -217,7 +166,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9 }}
-          className="relative mx-auto flex h-[min(420px,78vw)] w-full max-w-[min(100%,28rem)] items-center justify-center sm:h-[min(480px,70vw)] sm:max-w-xl lg:mx-0 lg:h-[min(560px,58vh)] lg:max-w-none xl:h-[min(620px,62vh)]"
+          className="relative mx-auto flex h-[min(380px,82vw)] w-full max-w-[min(100%,26rem)] items-center justify-center sm:h-[min(460px,72vw)] sm:max-w-xl lg:mx-0 lg:h-[min(560px,58vh)] lg:max-w-none xl:h-[min(620px,90vh)]"
         >
           <motion.div
             style={{ opacity: heroGlowOpacity }}
@@ -253,7 +202,6 @@ export default function LandingPage() {
 
       <StickyScrollTabs />
 
-
       <IndustrySolutions />
       <EngagementModels />
       <AccoladesSlider />
@@ -261,50 +209,15 @@ export default function LandingPage() {
 
       <TechStorytelling />
 
-      <motion.section
-        id="contact"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.25 }}
-        variants={sectionReveal}
-        className="mx-auto max-w-7xl px-5 py-24 lg:px-8"
-      >
-        <motion.div whileHover={{ scale: 1.01 }} className="relative overflow-hidden rounded-[3rem] border border-[rgba(10,89,194,0.3)] bg-gradient-to-br from-primary via-primary-strong to-[rgba(10,89,194,0.8)] p-8 text-surface shadow-[0_24px_80px_rgba(10,89,194,0.35)] md:p-14">
-          <motion.div
-            animate={shouldReduceMotion ? undefined : { x: [0, -26, 0], y: [0, 20, 0] }}
-            transition={shouldReduceMotion ? undefined : { duration: 9, repeat: Infinity, ease: smoothEase }}
-            className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-[rgba(255,255,255,0.25)] blur-3xl"
-          />
-          <div className="relative grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.35em] text-[rgba(255,255,255,0.9)]">Launch With Confidence</p>
-              <h2 className="mt-4 text-4xl font-black md:text-6xl">Ready to engineer your next digital product?</h2>
-              <p className="mt-5 max-w-2xl text-lg text-[rgba(255,255,255,0.8)]">Share your goals, choose the right engagement model, and move from idea to execution with a dedicated product engineering team.</p>
-            </div>
-            <form className="grid gap-4 rounded-[2rem] border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.95)] p-5 text-(--color-text) shadow-xl backdrop-blur-xl">
-              <input className="rounded-2xl border border-[rgba(10,89,194,0.14)] bg-surface px-5 py-4 outline-none ring-[rgba(10,89,194,0.2)] focus:ring-2" placeholder="Your name" />
-              <input className="rounded-2xl border border-[rgba(10,89,194,0.14)] bg-surface px-5 py-4 outline-none ring-[rgba(10,89,194,0.2)] focus:ring-2" placeholder="Email address" />
-              <textarea className="min-h-28 rounded-2xl border border-[rgba(10,89,194,0.14)] bg-surface px-5 py-4 outline-none ring-[rgba(10,89,194,0.2)] focus:ring-2" placeholder="Tell us about your project" />
-              <button type="button" className="rounded-2xl bg-primary px-6 py-4 font-black text-surface transition hover:bg-primary-strong">
-                Submit Request
-              </button>
-            </form>
-          </div>
-        </motion.div>
-      </motion.section>
+      <UnbeatableBenefitsSection />
+
+      <WorldwideLegacySection />
+
+      <ExpertInsightsSection />
+
+      <PremiumFaqSection />
+
+      <IgniteVisionContactSection />
     </main>
   );
 }
-
-function SectionIntro({ eyebrow, title, text }: { eyebrow: string; title: string; text: string }) {
-  return (
-    <section className="mx-auto max-w-7xl px-5 py-20 text-center lg:px-8">
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-        <p className="text-sm font-bold uppercase tracking-[0.35em] text-primary">{eyebrow}</p>
-        <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-black tracking-tight text-(--color-text) md:text-6xl">{title}</h2>
-        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">{text}</p>
-      </motion.div>
-    </section>
-  );
-}
-

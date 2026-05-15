@@ -52,6 +52,8 @@ body {
   color: var(--color-text);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body::selection {
@@ -96,6 +98,55 @@ body::selection {
 }
 
 @layer utilities {
+  /** Premium horizontal rhythm: matches Tailwind max-w-7xl (80rem) + responsive gutters */
+  .site-container {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 80rem;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .site-container {
+      padding-inline: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .site-container {
+      padding-inline: 2rem;
+    }
+  }
+  /** Carousel / extra-wide bands (same gutters) */
+  .site-container-wide {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 100rem;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .site-container-wide {
+      padding-inline: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .site-container-wide {
+      padding-inline: 2rem;
+    }
+  }
+  /** Default vertical spacing for marketing sections */
+  .site-section-y {
+    padding-block: 4rem;
+  }
+  @media (min-width: 640px) {
+    .site-section-y {
+      padding-block: 5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .site-section-y {
+      padding-block: 6rem;
+    }
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
